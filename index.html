@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bhavyasree Chinthala | Data Engineer</title>
+    <meta
+      name="description"
+      content="Bhavyasree Chinthala - Data Engineer focused on scalable pipelines, data quality, and analytics-ready systems."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0a0f14;
+        --bg-2: #0e1c22;
+        --accent: #f97316;
+        --accent-2: #22d3ee;
+        --accent-3: #a3e635;
+        --ink: #f8fafc;
+        --muted: #cbd5e1;
+        --panel: rgba(255, 255, 255, 0.06);
+        --border: rgba(255, 255, 255, 0.12);
+        --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family: "Space Grotesk", system-ui, -apple-system, sans-serif;
+        background: radial-gradient(1000px 700px at 6% -10%, #14323a, transparent),
+          radial-gradient(900px 600px at 100% 0%, #1c2b4a, transparent),
+          linear-gradient(180deg, var(--bg), var(--bg-2));
+        min-height: 100vh;
+      }
+
+      .shell {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 44px 20px 90px;
+      }
+
+      .hero {
+        display: grid;
+        gap: 28px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        align-items: center;
+        padding: 32px;
+        border: 1px solid var(--border);
+        border-radius: 26px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        background: conic-gradient(from 200deg, var(--accent), transparent 60%);
+        right: -130px;
+        top: -130px;
+        opacity: 0.7;
+        filter: blur(12px);
+      }
+
+      .name {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.1rem, 4vw, 3.8rem);
+        margin: 0 0 6px;
+        letter-spacing: 0.6px;
+      }
+
+      .role {
+        font-size: 1.1rem;
+        color: var(--muted);
+        margin: 0 0 16px;
+      }
+
+      .tagline {
+        font-size: 1.06rem;
+        line-height: 1.65;
+        color: #e2e8f0;
+        margin: 0 0 22px;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .btn {
+        text-decoration: none;
+        color: #0a0f14;
+        background: var(--accent);
+        padding: 12px 18px;
+        border-radius: 999px;
+        font-weight: 600;
+        box-shadow: 0 10px 30px rgba(249, 115, 22, 0.35);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .btn.secondary {
+        background: transparent;
+        color: var(--ink);
+        border: 1px solid var(--border);
+        box-shadow: none;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 32px rgba(249, 115, 22, 0.4);
+      }
+
+      .badges {
+        display: grid;
+        gap: 12px;
+      }
+
+      .badge {
+        padding: 12px 16px;
+        border-radius: 16px;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        font-size: 0.95rem;
+      }
+
+      .section {
+        margin-top: 38px;
+        display: grid;
+        gap: 18px;
+      }
+
+      .section h2 {
+        font-size: 1.45rem;
+        margin: 0;
+        letter-spacing: 0.5px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 18px;
+        box-shadow: var(--shadow);
+      }
+
+      .card h3 {
+        margin: 0 0 10px;
+        font-size: 1.1rem;
+      }
+
+      .card p,
+      .card li {
+        color: var(--muted);
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
+
+      .project-card {
+        display: grid;
+        gap: 12px;
+      }
+
+      .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .chip {
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 4px 10px;
+        font-size: 0.8rem;
+        color: var(--ink);
+        background: rgba(15, 20, 26, 0.35);
+      }
+
+      .project-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .btn.small {
+        padding: 8px 14px;
+        font-size: 0.9rem;
+      }
+
+      details.project-details {
+        border-top: 1px solid var(--border);
+        padding-top: 10px;
+      }
+
+      details.project-details summary {
+        cursor: pointer;
+        font-weight: 600;
+        color: var(--ink);
+        margin-bottom: 6px;
+      }
+
+      ul {
+        margin: 10px 0 0;
+        padding-left: 18px;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 16px;
+      }
+
+      .timeline-item {
+        padding: 18px;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: rgba(16, 24, 32, 0.65);
+      }
+
+      .timeline-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 6px;
+        margin-bottom: 10px;
+      }
+
+      .timeline-header strong {
+        font-size: 1rem;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.85rem;
+        color: #0a0f14;
+        background: #a7f3d0;
+        padding: 4px 10px;
+        border-radius: 999px;
+      }
+
+      .contact-bar {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        align-items: center;
+        padding: 20px;
+        border-radius: 18px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .contact-bar a {
+        color: var(--ink);
+        text-decoration: none;
+      }
+
+      .floating {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background: var(--accent-2);
+        color: #0a0f14;
+        padding: 10px 14px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: var(--shadow);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          padding: 24px;
+        }
+
+        .floating {
+          position: static;
+          margin-top: 16px;
+          display: inline-flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <section class="hero reveal">
+        <div>
+          <h1 class="name">Bhavyasree Chinthala</h1>
+          <p class="role">Data Engineer - Seattle, WA</p>
+          <p class="tagline">
+            Data Engineer with hands-on experience designing, building, and maintaining scalable data pipelines and
+            ETL workflows. Skilled in Python and Java programming, Big Data platforms, NoSQL and RDBMS databases,
+            containerization, and DevOps practices. Focused on reliable, production-grade data systems.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="mailto:chinthala.bhavyasree@gmail.com">Let's Talk</a>
+            <a class="btn secondary" href="tel:+12169712244">Call +1 (216) 971-2244</a>
+          </div>
+        </div>
+        <div class="badges">
+          <div class="badge">Big Data: Hadoop, Hive, Snowflake</div>
+          <div class="badge">Databases: Oracle, MySQL, MongoDB, DynamoDB</div>
+          <div class="badge">DevOps: CI/CD, Docker, Kubernetes, Git</div>
+          <div class="badge">Data Formats: Parquet</div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <h2>Objective</h2>
+        <div class="card">
+          <p>
+            Data Engineer with hands-on experience designing, building, and maintaining scalable data pipelines and
+            ETL workflows. Skilled in Python and Java programming, Big Data platforms (Hadoop, Hive, Snowflake), NoSQL
+            and RDBMS databases, containerization, and DevOps practices. Experienced in developing analytics-ready data
+            solutions, implementing CI/CD workflows, and collaborating with cross-functional teams to deliver
+            production-grade, reliable, and compliant data systems.
+          </p>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <h2>Skills</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Big Data Platforms</h3>
+            <p>Hadoop, Hive, Snowflake, NoSQL, MongoDB, DynamoDB, Oracle, MySQL</p>
+          </div>
+          <div class="card">
+            <h3>Programming &amp; Scripting</h3>
+            <p>Python, Java</p>
+          </div>
+          <div class="card">
+            <h3>Data Engineering</h3>
+            <p>Data Pipelines, ETL, Data Models, Data Solutions, Data Analytics</p>
+          </div>
+          <div class="card">
+            <h3>DevOps &amp; Automation</h3>
+            <p>CI/CD, Version Control, Containerization, Docker, Kubernetes</p>
+          </div>
+          <div class="card">
+            <h3>Data Formats</h3>
+            <p>Parquet</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <strong>Data Engineer - HCL Technologies</strong>
+              <span>Chennai, India - 2022-2023</span>
+            </div>
+            <ul>
+              <li>Developed and maintained scalable ETL pipelines to process large datasets across sources using Python, SQL, and Spark.</li>
+              <li>Built and optimized data solutions for analytics, supporting RDBMS and NoSQL systems.</li>
+              <li>Implemented CI/CD workflows and version control for reliable deployment of data pipelines.</li>
+              <li>Used Docker and Kubernetes for deployment and workflow orchestration.</li>
+              <li>Processed and stored data in Parquet for optimized analytics and downstream use.</li>
+              <li>Collaborated with cross-functional teams to ensure data quality, compliance, and operational excellence.</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <strong>Data Engineer Volunteer - Bright Mind Enrichment and Schooling</strong>
+              <span>Remote - 2025</span>
+            </div>
+            <ul>
+              <li>Assisted in building ETL workflows and data pipelines to support analytics and reporting.</li>
+              <li>Developed Python scripts and SQL queries for data validation, transformation, and processing.</li>
+              <li>Supported data modeling and documentation for governance and traceability.</li>
+              <li>Collaborated with team members to improve automation and data processing efficiency.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="projects">
+        <h2>Projects</h2>
+        <div class="grid">
+          <article class="card project-card" id="project-cloud-solution">
+            <div class="pill">Cloud-Based Data Solution Project</div>
+            <p>
+              Deployed containerized data workflows using Docker and Kubernetes for reliable production execution.
+            </p>
+            <div class="project-meta">
+              <span class="chip">Docker</span>
+              <span class="chip">Kubernetes</span>
+              <span class="chip">CI/CD</span>
+              <span class="chip">Git</span>
+              <span class="chip">Deployment</span>
+            </div>
+            <details class="project-details">
+              <summary>Highlights</summary>
+              <ul>
+                <li>Deployed containerized data workflows using Docker and Kubernetes for reliable production execution.</li>
+                <li>Implemented CI/CD pipelines and version control to manage iterative development and deployment.</li>
+              </ul>
+            </details>
+            <div class="project-links">
+              <a class="btn small secondary" href="#project-cloud-solution">Case Study</a>
+            </div>
+          </article>
+
+          <article class="card project-card" id="project-data-quality">
+            <div class="pill">Data Quality and Analytics Project</div>
+            <p>
+              Conducted data validation, quality checks, and monitoring of large datasets across RDBMS and NoSQL systems.
+            </p>
+            <div class="project-meta">
+              <span class="chip">Python</span>
+              <span class="chip">SQL</span>
+              <span class="chip">NoSQL</span>
+              <span class="chip">Monitoring</span>
+              <span class="chip">Governance</span>
+            </div>
+            <details class="project-details">
+              <summary>Highlights</summary>
+              <ul>
+                <li>Conducted data validation, quality checks, and monitoring across multiple data stores.</li>
+                <li>Generated actionable insights and supported data governance and compliance requirements.</li>
+              </ul>
+            </details>
+            <div class="project-links">
+              <a class="btn small" href="https://github.com/Bhavyasree-19/data-quality-analytics" target="_blank" rel="noreferrer">
+                View Code
+              </a>
+              <a class="btn small secondary" href="#project-data-quality">Case Study</a>
+            </div>
+          </article>
+
+          <article class="card project-card" id="project-psit-charlotte">
+            <div class="pill">Positive Social Impact Tool (PSIT) - Charlotte</div>
+            <p>
+              Mapped, measured, and visualized PSIT indicators across Charlotte ZIP codes by integrating demographic,
+              environmental, land use, and accessibility data.
+            </p>
+            <div class="project-meta">
+              <span class="chip">GIS</span>
+              <span class="chip">Data Viz</span>
+              <span class="chip">Python</span>
+              <span class="chip">Spatial Analysis</span>
+              <span class="chip">Policy Insights</span>
+            </div>
+            <details class="project-details">
+              <summary>Highlights</summary>
+              <ul>
+                <li>Built ZIP-level indicators and composite scores for social impact.</li>
+                <li>Integrated multi-source datasets for equity and accessibility analysis.</li>
+                <li>Delivered maps and dashboards to guide community decision-making.</li>
+              </ul>
+            </details>
+            <div class="project-links">
+              <a
+                class="btn small"
+                href="https://github.com/Bhavyasree-19/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Code
+              </a>
+              <a class="btn small secondary" href="#project-psit-charlotte">Case Study</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <h2>Education</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Master's in Data Science</h3>
+            <p>Saint Peter's University (2023-2025)</p>
+          </div>
+          <div class="card">
+            <h3>B.Tech in Electronics and Communication Engineering</h3>
+            <p>Hindustan University (2018-2022)</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <h2>Certifications</h2>
+        <div class="card">
+          <ul>
+            <li>IBM Data Science Professional Certificate</li>
+            <li>IBM Artificial Intelligence Practitioner Certificate V2</li>
+            <li>Introduction to Programming with MATLAB - Coursera</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <h2>Contact</h2>
+        <div class="contact-bar">
+          <div>
+            <strong>Email</strong><br />
+            <a href="mailto:chinthala.bhavyasree@gmail.com">chinthala.bhavyasree@gmail.com</a>
+          </div>
+          <div>
+            <strong>LinkedIn</strong><br />
+            <a href="https://linkedin.com/in/bhavyasree-chinthala-397447215" target="_blank" rel="noreferrer">
+              linkedin.com/in/bhavyasree-chinthala-397447215
+            </a>
+          </div>
+          <div>
+            <strong>GitHub</strong><br />
+            <a href="https://github.com/Bhavyasree-19" target="_blank" rel="noreferrer">
+              github.com/Bhavyasree-19
+            </a>
+          </div>
+        </div>
+        <a class="floating" href="mailto:chinthala.bhavyasree@gmail.com">Hire Bhavyasree</a>
+      </section>
+    </div>
+
+    <script>
+      const reveals = document.querySelectorAll(".reveal");
+      const onScroll = () => {
+        const trigger = window.innerHeight * 0.88;
+        reveals.forEach((el) => {
+          if (el.getBoundingClientRect().top < trigger) {
+            el.classList.add("visible");
+          }
+        });
+      };
+      window.addEventListener("scroll", onScroll);
+      onScroll();
+    </script>
+  </body>
+</html>
