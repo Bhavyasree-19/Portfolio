@@ -275,12 +275,21 @@
         gap: 10px;
       }
 
-      .contact-avatar {
+      .contact-avatar-wrap {
         width: 44px;
         height: 44px;
         border-radius: 50%;
-        object-fit: cover;
+        overflow: hidden;
+        flex: 0 0 44px;
         border: 2px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .contact-avatar {
+        width: 44px;
+        height: 44px;
+        object-fit: cover;
+        object-position: center;
+        display: block;
       }
 
       .contact-bar a {
@@ -575,7 +584,9 @@
           <div>
             <strong>LinkedIn</strong><br />
             <div class="contact-item">
-              <img class="contact-avatar" src="assets/linkedin-photo.jpg" alt="LinkedIn profile" />
+              <span class="contact-avatar-wrap">
+                <img class="contact-avatar" src="assets/linkedin-photo.jpg" alt="LinkedIn profile" />
+              </span>
               <a href="https://linkedin.com/in/bhavyasree-chinthala-397447215" target="_blank" rel="noreferrer">
                 linkedin.com/in/bhavyasree-chinthala-397447215
               </a>
