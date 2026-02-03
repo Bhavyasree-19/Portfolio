@@ -269,6 +269,20 @@
         background: rgba(255, 255, 255, 0.04);
       }
 
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .contact-avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+      }
+
       .contact-bar a {
         color: var(--ink);
         text-decoration: none;
@@ -559,9 +573,12 @@
           </div>
           <div>
             <strong>LinkedIn</strong><br />
-            <a href="https://linkedin.com/in/bhavyasree-chinthala-397447215" target="_blank" rel="noreferrer">
-              linkedin.com/in/bhavyasree-chinthala-397447215
-            </a>
+            <div class="contact-item">
+              <img class="contact-avatar" src="assets/linkedin-photo.jpg" alt="LinkedIn profile" />
+              <a href="https://linkedin.com/in/bhavyasree-chinthala-397447215" target="_blank" rel="noreferrer">
+                linkedin.com/in/bhavyasree-chinthala-397447215
+              </a>
+            </div>
           </div>
           <div>
             <strong>GitHub</strong><br />
