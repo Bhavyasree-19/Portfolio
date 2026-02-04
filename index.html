@@ -126,12 +126,19 @@
         place-items: center;
         border-radius: 10px;
         background: #ffffff;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
 
       .icon-btn img {
         width: 24px;
         height: 24px;
         object-fit: contain;
+      }
+
+      .icon-btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 22px rgba(0, 0, 0, 0.18);
       }
 
       .hero-text {
@@ -155,7 +162,7 @@
       .hero-cta {
         display: flex;
         flex-wrap: wrap;
-        gap: 12px;
+        gap: 24px;
         margin-top: 12px;
       }
 
@@ -167,11 +174,18 @@
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.6px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
 
       .btn.secondary {
         background: #ffffff;
         color: var(--ink);
+      }
+
+      .btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 22px rgba(0, 0, 0, 0.2);
       }
 
       .section {
@@ -341,12 +355,20 @@
         display: grid;
         place-items: center;
         border-radius: 10px;
+        background: #ffffff;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
 
       .contact-icons img {
         width: 22px;
         height: 22px;
         object-fit: contain;
+      }
+
+      .contact-icons a:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 22px rgba(0, 0, 0, 0.18);
       }
 
       @media (max-width: 640px) {
@@ -389,7 +411,7 @@
           </p>
           <p>
             Focused on reliable, production-grade data systems, data quality, and analytics-ready solutions that support
-            business outcomes.
+            business outcomes. 🤖
           </p>
           <div class="hero-cta">
             <a class="btn" href="mailto:chinthala.bhavyasree@gmail.com">Email Me</a>
