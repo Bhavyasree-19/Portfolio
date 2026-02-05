@@ -469,6 +469,19 @@
         margin-top: 0;
       }
 
+      .exp-heading {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .exp-emoji {
+        width: 56px;
+        height: 56px;
+        object-fit: contain;
+      }
+
       .exp-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -716,7 +729,10 @@
 
       <section class="section">
         <div class="exp-banner">
-          <h3>I’ve worked with tech company and non-profit organization.</h3>
+          <div class="exp-heading">
+            <h3>I’ve worked with tech company and non-profit organization.</h3>
+            <img class="exp-emoji" src="assets/experience-emoji.webp" alt="Working emoji" />
+          </div>
           <div class="exp-grid">
             <div class="exp-item">
               <strong>Data Engineer</strong>
