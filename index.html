@@ -294,11 +294,20 @@
       }
 
       .exp-banner {
-        background: linear-gradient(120deg, #e6c1b0, #c6d9d5, #e9d3b0, #c6d9d5);
-        background-size: 300% 300%;
-        animation: expGradient 10s ease infinite;
+        background: linear-gradient(
+          135deg,
+          #d7a0a4 0%,
+          #cdb2a1 25%,
+          #c7ba8e 45%,
+          #a7b87b 70%,
+          #8ea86a 100%
+        );
+        background-size: 400% 400%;
+        animation: expGradient 18s ease-in-out infinite;
         border: 1px solid var(--line);
         padding: 28px;
+        position: relative;
+        overflow: hidden;
       }
 
       @keyframes expGradient {
@@ -311,6 +320,18 @@
         100% {
           background-position: 0% 50%;
         }
+      }
+
+      .exp-banner::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.25), transparent 45%),
+          radial-gradient(circle at 80% 40%, rgba(255, 255, 255, 0.2), transparent 50%),
+          radial-gradient(circle at 30% 80%, rgba(255, 255, 255, 0.18), transparent 55%);
+        mix-blend-mode: screen;
+        opacity: 0.7;
+        pointer-events: none;
       }
 
       .exp-banner h3 {
