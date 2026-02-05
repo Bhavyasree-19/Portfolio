@@ -373,6 +373,19 @@
         font-family: "IBM Plex Mono", ui-monospace;
       }
 
+      .about-heading {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .about-emoji {
+        width: 52px;
+        height: 52px;
+        object-fit: contain;
+      }
+
       .about-text p {
         line-height: 1.7;
         color: #2e3235;
@@ -705,7 +718,10 @@
             <img src="assets/about-photo-20260204b.png" alt="Bhavyasree portrait" />
           </div>
           <div class="about-text">
-            <h4>A Bit About Me</h4>
+            <div class="about-heading">
+              <h4>A Bit About Me</h4>
+              <img class="about-emoji" src="assets/about-emoji.webp" alt="Thumbs up emoji" />
+            </div>
             <p>
               Data Engineer with a background in Data Science and Electronics &amp; Communication Engineering. Experienced
               in building ETL pipelines, optimizing data models, and delivering analytics-ready datasets for business and
