@@ -319,6 +319,19 @@
         object-fit: contain;
       }
 
+      .cert-card {
+        border: 1px solid var(--line);
+        background: #ffffff;
+        padding: 18px 20px;
+      }
+
+      .cert-card ul {
+        margin: 0;
+        padding-left: 18px;
+        display: grid;
+        gap: 8px;
+      }
+
       .about {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -732,7 +745,7 @@
 
       <section class="section">
         <h3>Certifications</h3>
-        <div class="work-card">
+        <div class="cert-card">
           <ul>
             <li>IBM Data Science Professional Certificate</li>
             <li>IBM Artificial Intelligence Practitioner Certificate V2</li>
