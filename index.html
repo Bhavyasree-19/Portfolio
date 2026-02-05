@@ -295,15 +295,15 @@
 
       .exp-banner {
         background: linear-gradient(
-          135deg,
-          #d7a0a4 0%,
-          #cdb2a1 25%,
-          #c7ba8e 45%,
-          #a7b87b 70%,
-          #8ea86a 100%
+          120deg,
+          #e7a3b2 0%,
+          #e8c5a2 22%,
+          #e7dc9a 45%,
+          #c6d79a 68%,
+          #9cc48a 100%
         );
-        background-size: 400% 400%;
-        animation: expGradient 18s ease-in-out infinite;
+        background-size: 500% 500%;
+        animation: expGradient 22s ease-in-out infinite;
         border: 1px solid var(--line);
         padding: 28px;
         position: relative;
@@ -326,12 +326,26 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.25), transparent 45%),
-          radial-gradient(circle at 80% 40%, rgba(255, 255, 255, 0.2), transparent 50%),
-          radial-gradient(circle at 30% 80%, rgba(255, 255, 255, 0.18), transparent 55%);
+        background: radial-gradient(circle at 15% 25%, rgba(255, 214, 220, 0.45), transparent 50%),
+          radial-gradient(circle at 80% 30%, rgba(255, 235, 200, 0.35), transparent 55%),
+          radial-gradient(circle at 35% 80%, rgba(200, 230, 190, 0.4), transparent 55%);
+        filter: blur(12px);
         mix-blend-mode: screen;
-        opacity: 0.7;
+        opacity: 0.85;
         pointer-events: none;
+        animation: expBlobs 16s ease-in-out infinite;
+      }
+
+      @keyframes expBlobs {
+        0% {
+          transform: translate(0, 0) scale(1);
+        }
+        50% {
+          transform: translate(6px, -8px) scale(1.04);
+        }
+        100% {
+          transform: translate(0, 0) scale(1);
+        }
       }
 
       .exp-banner h3 {
