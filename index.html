@@ -310,6 +310,16 @@
         overflow: hidden;
       }
 
+      .exp-banner::before {
+        content: "";
+        position: absolute;
+        inset: -20%;
+        background: inherit;
+        filter: blur(28px);
+        opacity: 0.85;
+        pointer-events: none;
+      }
+
       @keyframes expGradient {
         0% {
           background-position: 0% 50%;
