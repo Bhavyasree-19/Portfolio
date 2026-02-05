@@ -246,6 +246,13 @@
         transition: transform 0.8s ease;
       }
 
+      .work-thumb video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s ease;
+      }
+
       .work-thumb::after {
         content: "";
         position: absolute;
@@ -617,7 +624,11 @@
             <div class="work-meta">2023</div>
           </article>
           <article class="work-card">
-            <div class="work-thumb"><span>Tableau Dashboard</span></div>
+            <div class="work-thumb">
+              <video muted autoplay loop playsinline preload="metadata">
+                <source src="assets/project-tableau.mp4#t=10" type="video/mp4" />
+              </video>
+            </div>
             <div class="work-title">Tableau Workbook</div>
             <div class="work-meta">2024</div>
             <div class="work-links">
