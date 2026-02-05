@@ -294,9 +294,23 @@
       }
 
       .exp-banner {
-        background: linear-gradient(120deg, #e6c1b0, #c6d9d5, #e9d3b0);
+        background: linear-gradient(120deg, #e6c1b0, #c6d9d5, #e9d3b0, #c6d9d5);
+        background-size: 300% 300%;
+        animation: expGradient 10s ease infinite;
         border: 1px solid var(--line);
         padding: 28px;
+      }
+
+      @keyframes expGradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
       }
 
       .exp-banner h3 {
