@@ -308,6 +308,7 @@
         padding: 28px;
         position: relative;
         overflow: hidden;
+        z-index: 0;
       }
 
       .exp-banner::before {
@@ -318,6 +319,7 @@
         filter: blur(28px);
         opacity: 0.85;
         pointer-events: none;
+        z-index: 0;
       }
 
       @keyframes expGradient {
@@ -344,6 +346,12 @@
         opacity: 0.85;
         pointer-events: none;
         animation: expBlobs 16s ease-in-out infinite;
+        z-index: 0;
+      }
+
+      .exp-banner > * {
+        position: relative;
+        z-index: 1;
       }
 
       @keyframes expBlobs {
