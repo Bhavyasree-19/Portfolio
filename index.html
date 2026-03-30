@@ -357,15 +357,15 @@
       }
 
       .about-photo img {
-        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        object-position: center;
+      }
+display: block;
         max-width: 400px;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-      }
-
-      .about-text h4 {
-        font-size: 1.4rem;
-        margin: 0 0 10px;
+        border-radius: 8px
         font-family: "IBM Plex Mono", ui-monospace;
       }
 
@@ -712,7 +712,7 @@
       <section class="section">
         <div class="about">
           <div class="about-photo">
-            <img src="assets/about-photo.png" alt="Bhavyasree portrait" />
+            <img src="assets/about-photo.webp" alt="Bhavyasree portrait" />
           </div>
           <div class="about-text">
             <div class="about-heading">
